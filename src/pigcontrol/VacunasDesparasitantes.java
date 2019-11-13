@@ -121,7 +121,7 @@ public class VacunasDesparasitantes extends javax.swing.JFrame {
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -129,10 +129,6 @@ public class VacunasDesparasitantes extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tUsuarios);
-        if (tUsuarios.getColumnModel().getColumnCount() > 0) {
-            tUsuarios.getColumnModel().getColumn(0).setResizable(false);
-            tUsuarios.getColumnModel().getColumn(1).setResizable(false);
-        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
