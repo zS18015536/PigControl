@@ -37,21 +37,26 @@ public class CambiarContraseña extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         ContraActual = new javax.swing.JPasswordField();
         ContraNew = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cambiar Nombre de Usuario");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
         jLabel2.setText("Cambiar Contraseña de Usuario");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel3.setText("Contraseña Actual");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 53, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel4.setText("Nueva Contraseña");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 131, 140, -1));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jButton1.setText("Cambiar");
@@ -60,6 +65,7 @@ public class CambiarContraseña extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 235, -1, -1));
 
         jButton2.setText("Menu Principal");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +73,7 @@ public class CambiarContraseña extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
 
         ContraActual.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ContraActual.addActionListener(new java.awt.event.ActionListener() {
@@ -74,62 +81,32 @@ public class CambiarContraseña extends javax.swing.JFrame {
                 ContraActualActionPerformed(evt);
             }
         });
+        getContentPane().add(ContraActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 93, 140, 27));
 
         ContraNew.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ContraNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContraNewActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ContraNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 171, 140, 29));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ContraActual)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ContraNew))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton2))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(ContraActual, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(ContraNew, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addComponent(jButton2))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fondos/FondoAzul.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 350));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (ContraActual.getText().equals(Arre[1])) {
+       if (ContraActual.getText().equals(Arre[1])) {
             Arre[1] = ContraNew.getText();
             JOptionPane.showInternalMessageDialog(null,"Se Cambio la Contraseña Exitosamente", "Contraseña Cambiada",JOptionPane.DEFAULT_OPTION);
             limpiar();
         }
         else{
             JOptionPane.showInternalMessageDialog(null,"La contraseña No se pudo cambiar", "Error ",JOptionPane.ERROR_MESSAGE); 
-        }
+        }       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -141,6 +118,10 @@ public class CambiarContraseña extends javax.swing.JFrame {
     private void ContraActualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraActualActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ContraActualActionPerformed
+
+    private void ContraNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraNewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContraNewActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,5 +167,6 @@ public class CambiarContraseña extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
