@@ -37,6 +37,7 @@ public class Login extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         Contraseña = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,24 +55,24 @@ public class Login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 128, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 130, -1));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 2, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Usuario");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 102, 343, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 343, -1));
 
         Usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 137, 133, -1));
+        getContentPane().add(Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 133, -1));
 
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 2, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Contraseña");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 189, 343, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 343, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jButton2.setText("Recuperar Contraseña");
@@ -80,7 +81,7 @@ public class Login extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 190, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 190, -1));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jButton3.setText("Salir");
@@ -89,11 +90,15 @@ public class Login extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 90, 20));
-        getContentPane().add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 229, 133, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, 90, -1));
+        getContentPane().add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 133, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fondos/FondoAzul.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 400));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fondos/User_icon.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 130, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fondos/Fondo_Amplio.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 520));
 
         pack();
         setLocationRelativeTo(null);
@@ -170,5 +175,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
